@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor = "let tarefa of tarefas; index as i; first as is first" >
+      <p [ngStyle]="{'text-decoration': tarefa.concluido ? 'line-through': 'none'}">
+          {{tarefa.descricao}}
+      </p>
+      <button (click) = "realizado(tarefa)">Realizar</button>
+  </li>
+</ul>
